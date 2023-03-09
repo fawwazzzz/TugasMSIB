@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 JavaScript</title>
+</head>
+<body>
+    <h3><marquee behavior="" direction="">Tugas 1 JavaScript</marquee></h3>
+    <hr/>
+</body>
+<script>
+    // Buatlah Rumus Matematika Bangun Datar Menggunakan JavaScript
+    // Bangun ruang sebagai berikut, persegi panjang, jajar genjang, segitiga
+
+    // Soal Persegi Panjang
+    var panjangPersegiPangjang = 10;
+    var lebarPersegiPanjang = 5;
+    let luasPersegiPanjang = panjangPersegiPangjang * lebarPersegiPanjang;
+    let kelilingPersegiPanjang = 2 * (panjangPersegiPangjang +lebarPersegiPanjang);
+    document.write("<b># Persegi Panjang</b>" + "<br>")
+    document.write("Diketahui sebuah pesegi panjang memiliki panjang " + panjangPersegiPangjang + " cm, lebar " + lebarPersegiPanjang + " cm, Maka berapakah luas dan keliling bangun tersebut? " );
+    document.write("<br>" + "Luas persegi panjang adalah " + luasPersegiPanjang + " cm<sup>2</sup>" + "<br> Keliling persegi panjang adalah " + kelilingPersegiPanjang + " cm<sup>2</sup>");
+    document.write("<br>" + "<br>");
+
+    //Soal Jajar Genjang
+    var alasJajarGenjang= 12;
+    var tinggiJajarGenjang = 6;
+    var sisiMiring = 8;
+    let luasJajarGenjang = alasJajarGenjang * tinggiJajarGenjang;
+    let kelilingJajarGenjang = 2 * (alasJajarGenjang + sisiMiring);
+    document.write("<b># Jajar Genjang</b>" + "<br>");
+    document.write("Diketahui sebuah jajar genjang memiliki alas " + alasJajarGenjang + " cm, tinggi " + tinggiJajarGenjang + " cm, sisi miring "+ sisiMiring +" cm, Maka berapakah luas dan keliling bangun tersebut? " );
+    document.write("<br>" + "Luas jajar genjang adalah " + luasJajarGenjang + " cm<sup>2</sup>" + "<br> Keliling jajar genjang adalah " + kelilingJajarGenjang + " cm<sup>2</sup>");
+    document.write("<br>" + "<br>");
+
+    // Soal Segitiga
+    var alasSegitiga = 10;
+    var tinggiSegitiga = 5;
+    var sisiMiringSegitiga = 7;
+    let luasSegitiga = alasSegitiga * tinggiSegitiga / 2;
+    let kelilingSegitiga = (2 * sisiMiringSegitiga) + alasSegitiga;
+    document.write("<b># Segitiga</b>" + "<br>");
+    document.write("Diketahui sebuah segitiga memiliki alas " + alasSegitiga + " cm, tinggi " + tinggiSegitiga + "cm, sisi miring " +sisiMiringSegitiga + " cm, Maka berapakah luas dan keliling bangun tersebut? " );
+    document.write("<br>" + "Luas segitiga adalah " + luasSegitiga + " cm<sup>2</sup>" + "<br> Keliling segitiga adalah " + kelilingSegitiga + " cm<sup>2</sup>");
+    document.write("<br>" + "<br>");
+
+    // Soal Lingkaran
+    var jari2 = 14;
+    var phi = 3.14;
+    let luasLingkaran = phi * jari2 * jari2;
+    let kelilingLingkaran = 2 * jari2 * phi;
+    document.write("<b># Lingkaran</b>" + "<br>");
+    document.write("Diketahui sebuah lingkaran memiliki jari - jari  " + jari2 + " cm, Maka berapakah luas dan keliling bangun tersebut? " );
+    document.write("<br>" + "Luas lingkaran adalah " + luasLingkaran + " cm<sup>2</sup>" + "<br> Keliling lingkaran adalah " + kelilingLingkaran + " cm<sup>2</sup>");
+    document.write("<br>" + "<br>");
+
+    // Soal Persegi
+    var sisiPersegi = 5;
+    let luasPersegi = sisiPersegi * sisiPersegi;
+    let kelilingPersegi = 4 * sisiPersegi;
+    document.write("<b># Persegi</b>" + "<br>");
+    document.write("Diketahui sebuah persegi memiliki sisi  " + sisiPersegi + " cm, Maka berapakah luas dan keliling bangun tersebut? " );
+    document.write("<br>" + "Luas persegi adalah " + luasPersegi + " cm<sup>2</sup>" + "<br> Keliling persegi adalah " + kelilingPersegi + " cm<sup>2</sup>");
+    document.write("<br>" + "<br>");
+
+</script>
+</html>
