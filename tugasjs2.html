@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2 Java Scrip</title>
+</head>
+<body>
+    <h3><marquee behavior="" direction="">Tugas 2 - Java Sript</marquee></h3>
+    <hr/>
+</body>
+<script>
+    // Diketahui. Pegawai: nama_kalian | Jabatan : manager | status : bebas
+//Proses:
+// Cetak data pegawai , jabatan, gaji dan lainnya dengan ketentuan 
+// Gaji pokok : jika jabatan manager(10), Asisten manager(8), Staff(5) Juta
+// Tunjangan Jabatan = 10% dari Gaji pokok
+// BPJS = 10% dari gaji pokok 
+// Tunjangan keluarga bagia yang sudah menikah sebesar 10%
+// Totalkan seluruh pendapatan atau penghasilan 
+// Masukan ke repository masing masing dan kirim linknya ke LMS
+
+    let pegawai = "Fawwaz"; // Nama_Kalian
+    let jabatan = "Manager"; // Manager | Asisten Manager | Staff
+    let status = ""; // Kawin / Belum Kawin
+
+    let gaji = 0;
+    switch (jabatan) {
+        case 'Manager': gaji = 10000000; break;
+        case 'Asisten Manager': gaji = 8000000; break;
+        case 'Staff': gaji = 5000000; break;
+        default: gaji = 0;
+    };
+
+    let tunjanganJabatan = gaji * 0.1;
+    let bpjs = gaji * 0.1;
+
+    let tunjanganKeluarga = 0;
+    if (status == 'Kawin') tunjanganKeluarga = gaji * 0.1;
+    else tunjanganKeluarga = 0;
+
+    let totalPendapatan = gaji + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+
+
+    document.write("#~~~~Data Pegawai~~~~#<br>");
+    document.write("Nama Pegawai : " + pegawai + "<br>Jabatan : " + jabatan + "<br> Gaji Pokok : " + gaji + "<br>");
+    document.write("Tunjangan Jabatan : " + tunjanganJabatan + "<br>BPJS : " + bpjs + "<br>Tunjangan Keluarga : " + tunjanganKeluarga + "<br>");
+    document.write("Total Pendapatan : " + totalPendapatan)
+</script>
+</html>
