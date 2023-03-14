@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 Java Script</title>
+</head>
+<body>
+    <h3><marquee behavior="" direction="">Tugas 3 - Java Sript</marquee></h3>
+    <hr/>
+</body>
+<script>
+    /*Lengkapi source pada latihan 11 Javascript dengan ketentuan sebagai berikut:
+set grade A - E (menggunakan if multi kondisi)
+                   // A = 90 - 100, B 80 - 89 dan seterusnya sampai E
+
+                   //set predikat (menggunakan swtich case)
+
+                   //A = Sangat baik, B = Baik, C = Cukup, D= Kurang, E = SAngat kurang
+                   //set warna warni table menggunakan looping
+
+Upload source di github dan kirim linknya ke LMS*/
+let p1 = {nama:"Fawwaz", nilai: 97 };
+let p2 = {nama: "Asep", nilai: 80};
+let p3 = {nama: "Ujang", nilai: 70};
+let p4 = {nama: "Supri", nilai: 60};
+let p5 = {nama: "Udin", nilai: 50};
+let p6 = {nama: "Ucok", nilai: 40};
+
+let person = [p1, p2, p3, p4, p5, p6];
+</script>
+<h3>
+    <table style="padding: 10; text-align: center; width: 100%; border: 1;">
+        <thead>
+            <tr bgcolor="tomato">
+                <th>No</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Keterangan</th>
+                <th>Grade</th>
+                <th>Predikat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                var no = 1;
+                // Set Kelulusan
+                for (p of person) {
+                    let ket = (p.nilai >+ 60) ? "Lulus" : "Gagal";
+                    let warna = (no % 2 == 1) ? 'aqua' : 'aquamarine';
+                
+
+                // Set Grade A - E (Menggunakan If Multi Kondisi)
+                if (p.nilai > 89) {
+                    grade = 'A'
+                }
+                else if (p.nilai > 79) {
+                    grade = 'B'
+                }
+                else if (p.nilai > 69) {
+                    grade = 'C'
+                }
+                else if (p.nilai > 59) {
+                    grade = 'D'
+                }
+                else {
+                    grade = 'E'
+                }
+
+                // Set Predikat (Menggunakan Switch Case)
+                switch (grade) {
+                    case 'A': predi = "Sangat Baik"; break;
+                    case 'B': predi = "Baik"; break;
+                    case 'C': predi = "Cukup"; break;
+                    case 'D': predi = "Kurang"; break;
+                    case 'E': predi = "Sanagat Kurang"; break;
+                    default: predi= "?"; break;
+                }
+
+                // Set Warna-Warni Table Menggunakan Looping
+                document.write(`<tr bgcolor= "${warna}">
+                <td>${no++}</td>
+                <td>${p.nama}</td>
+                <td>${p.nilai}</td>
+                <td>${ket}</td>
+                <td>${grade}</td>
+                <td>${predi}</td>
+            </tr>`);
+        }
+            </script>
+        </tbody>
+    </table>
+</h3>
+</html>
