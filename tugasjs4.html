@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 JavaScript</title>
+    <style> 
+        input[type=text] {
+          width: 100%;
+          box-sizing: border-box;
+          border: 2px solid aquamarine;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: white;
+          background-image: url('searchicon.png');
+          background-position: 10px 10px; 
+          background-repeat: no-repeat;
+          padding: 12px 20px 12px 40px;
+        }
+        input[type=text]:focus {
+        background-color: lightblue;
+        }
+        label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        }
+        button[type=button],  button[type=submit],  button[type=reset] {
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3><marquee behavior="" direction="">Tugas 4 - Java Sript</marquee></h3>
+    <hr/>
+
+     <h1>Kalkulator</h1>
+    <form action="" id="kalkulator">
+        <fieldset>
+            <label for="">
+                Angka 1
+            </label>
+            <input type="text" name="angka1" placeholder="Masukan Angka Pertama">
+            <label for="">
+                Angka 2
+            </label>
+            <input type="text" name="angka2" placeholder="Masukan Angka Kedua">
+            <label for="">
+                Hasil
+            </label>
+            <input type="text" name="hasil" placeholder="Hasil" disabled>
+
+            <button type="button" name="action" value="tambah" onclick="hitung()">(+)</button>
+            <button type="button" name="action" value="kurang" onclick="hitung()">(-)</button>
+            <button type="button" name="action" value="kali" onclick="hitung()">(x)</button>
+            <button type="button" name="action" value="bagi" onclick="hitung()">(/)</button>
+            <button type="button" name="action" value="pangkat" onclick="hitung()">(^)</button>
+
+        </fieldset>
+    </form>
+    <script src="kalkulator.js"></script>
+</body>
+</html>
