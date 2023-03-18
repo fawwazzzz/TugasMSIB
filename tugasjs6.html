@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 6 JavaScript</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            width: 300px;
+            text-align: center;
+        }
+        #title, #handle, #footer {
+            background-color: aqua;
+            color: black;
+            font-weight: bold;
+        }
+        #handle {
+            display: inline-block;
+            width: 20px;
+            float: left;
+            background-color: red;
+            cursor: pointer;
+        }
+        #footer {
+            font-size: 20px;
+            background-color: aqua;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+<body>
+    <!---Referensi Youtube: https://www.youtube.com/watch?v=WExihNoJgsM&t=206s-->
+    <h3><marquee behavior="" direction="">Tugas 6 - Java Sript</marquee></h3>
+    <hr/>
+    <script>
+            // A $( document ).ready() block.
+            $( document ).ready(function() {
+            // Pembuatan Jquery Dengan Pemanggilan Selector
+            $("input").click(function () {
+                alert("Halloo!!")  
+            }); 
+            $(window).load(function() {
+                $("#handle").click(toggleImage);
+            });
+
+            function toggleImage() {
+                if ($("#handle").html() == '+') {
+                    $("#photo").show(1000, function () {
+                        $("#footer").show();
+                    });
+                    $("#handle").html('-');
+                }
+                else {
+                    $("#footer").hide();
+                    $("#photo").hide();
+                    $("#handle").html('+');
+                }
+            }
+            $("input").click(function () {
+                $("p").hide(1800)
+                $("img").hide(1800)
+            });  
+            
+        });
+    </script>
+    <div id="title"><span id="handle">-</span> Gambar 1</div> <!--- Tombol Untul Hide / Show (yang ini "-")-->
+    <img id="photo" src="./img/aether1.png" alt="" width="300px">
+    <div id="footer">aether 1</div>
+    <p id="title"><span id="handle">-</span> Gambar 2</p> 
+    <img id="photo1" src="./img/aether2.png" alt="" width="300px">
+    <p id="footer1">aether 2</p>
+    <p id="title"><span id="handle">-</span> Gambar 3</p> 
+    <img id="photo" src="./img/aether3.png" alt="" width="300px">
+    <p id="footer">aether 3</p>
+    <p id="title"><span id="handle">-</span> Gambar 4</p> 
+    <img id="photo" src="./img/aether4.png" alt="" width="300px">
+    <p id="footer">aether 4</p>
+    <input type="submit" value="Hide Gambar 2 - 4"> <!---Hide Gambar 2 - 4-->
+    <h3 ><a href="href="https://www.youtube.com/watch?v=WExihNoJgsM&t=206s" target="_blank"">Referensi</a></h3>
+</body>
+</html>
