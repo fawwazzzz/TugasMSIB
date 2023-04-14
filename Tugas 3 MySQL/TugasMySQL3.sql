@@ -224,6 +224,9 @@ SELECT id,nama,harga_jual FROM produk WHERE harga_jual > (SELECT AVG(harga_jual)
 6 rows in set (0.000 sec)
 
 5.	Tampilkan data pelanggan yang memiliki kartu dimana iuran tahunan kartu diatas 90rb
+ SELECT nama_pelanggan, kartu_id as kartu FROM pelanggan WHERE kartu_id in (SELECT id FROM kartu WHERE iuran > 90000);
+Empty set (0.007 sec)
+
 6.	Tampilkan statistik data produk dimana harga produknya dibawah rata-rata harga produk secara keseluruhan
  SELECT COUNT(*) AS jumlah_produk, MIN(harga_jual) AS Harga_Terendah, MAX(harga_jual) AS Harga_Tertinggi, AVG(harga_jual) AS Harga_Rata2 FROM produk WHERE harga_jual < (SELECT AVG(harga_jual) FROM produk);
 +---------------+----------------+-----------------+-------------+
@@ -233,5 +236,14 @@ SELECT id,nama,harga_jual FROM produk WHERE harga_jual > (SELECT AVG(harga_jual)
 +---------------+----------------+-----------------+-------------+
 1 row in set (0.001 sec)
 7.	Tampilkan data pelanggan yang memiliki kartu dimana diskon kartu yang diberikan diatas 3%
-
+ SELECT nama_pelanggan, kartu_id as kartu FROM pelanggan WHERE kartu_id in (SELECT id FROM kartu WHERE
+ diskon > 0.03);
++----------------+-------+
+| nama_pelanggan | kartu |
++----------------+-------+
+| Fawwaz         |     1 |
+| Agung          |     2 |
+| Asep           |     4 |
++----------------+-------+
+3 rows in set (0.000 sec)
 
