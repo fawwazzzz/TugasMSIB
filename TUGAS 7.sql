@@ -115,6 +115,14 @@ CALL totalPesanan(1);
 +--------+
 | 200000 |
 +--------+
+DELIMITER $$
+CREATE PROCEDURE semuaPesanan()
+    -> BEGIN
+    -> SELECT * FROM pesanan;
+    -> END$$
+
+DELIMITER ;
+CALL semuaPesanan();
 
 
 CREATE VIEW pesanan_produk_vw as SELECT pelanggan.id, pelanggan.kode, pelanggan.nama_pelanggan,pelanggan.alamat, pelanggan.jk,pelanggan.tmp_lahir,pelanggan.tgl_lahir,pelanggan.email, pelanggan.kartu_id,pesanan.tanggal,pesanan.total,pesanan.pelanggan_id,pesanan_items.produk_id,pesanan_items.qty,pesanan_items.harga FROM pelanggan RIGHT JOIN pesanan ON pelanggan.id = pesanan.pelanggan_id LEFT JOIN pesanan_items ON pesanan_items.pesanan_id = pesanan.id;
