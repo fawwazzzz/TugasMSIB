@@ -1,0 +1,21 @@
+diskusikan dengan kelompok masing-masing, antara lain:
+1. judul atau tema aplikasi 
+2. Skenario singkat penjelasan aplikasi
+3. Fitur-fitur apa saja yang akan ada didalam aplikasi
+
+buat dalam file word atau txt masukan ke github dan copas linknya ke LMS
+
+Judul : Sistem Administrasi Sekolah (SADIS)
+
+Scenario Project
+SADIS adalah web sistem informasi sekolah yang memiliki 4 role (Admin, Guru, Staf, dan User) dimana pengguna dapat berinteraksi sesuai izin (authorizations) yang diberikan oleh admin. SADIS memiliki beberapa fitur yang bermanfaat untuk sekolah, guru, murid, dan masyarakat yang tertarik pada sekolah SADIS. Fitur tersebut diantaranya adalah berita kegiatan, kurikulum, extrakulikuler, e-raport, sarana dan prasarana, alumni, data guru, data siswa, dan lain-lain. 
+
+Feature Project
+Berita kegiatan
+Kurikulum
+Extrakulikuler
+E-raport
+Sarana dan prasarana
+Alumni
+Data guru
+Data siswa
